@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+    height: 7vh;
+}
+h1{
+    font-style: italic;
+}
+ul{
+    padding-right: 50px;
+}
+a{
+    padding: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
