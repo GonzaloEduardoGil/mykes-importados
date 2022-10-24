@@ -19,20 +19,18 @@ export const ItemListContainer = () => {
     const {id} = useParams();
 
     const URL_BASE = "https://634cd882acb391d34a8d42e7.mockapi.io/zapatos"
-    //const URL_CAT = `${URL_BASE}/${id}`
-    //no se como hacer esto
 
     useEffect(() => {
       const getProductos = async() =>{
       try{
         const resp = await fetch(URL_BASE);
         const data = await resp.json();
-        setProductos(data);
+        {id ? setProductos(data.filter((item)=> item.categoria === id)) : setProductos(data)}
       } catch {
         console.log("error");
       } finally{
         setCargar(false);
-      }
+     }
     };
     getProductos();
     }, [id]);
